@@ -5,15 +5,19 @@
   
 
   
-  <title>Hexo</title>
+  <title>向上转型(java 转型问题) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="java 转型问题其实并不复杂，只要记住一句话：父类引用指向子类对象。什么叫父类引用指向子类对象，且听我慢慢道来.从2个名词开始说起：向上转型(upcasting) 、向下转型(downcasting).举个例子：有2个类，Father是父类，Son类继承自Father。Father f1 = new Son(); // 这就叫 upcasting （向上转型)// 现在f1引用指向一个Son对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="向上转型(java 转型问题)">
+<meta property="og:url" content="http://yoursite.com/2019/06/28/向上转型-java-转型问题/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="java 转型问题其实并不复杂，只要记住一句话：父类引用指向子类对象。什么叫父类引用指向子类对象，且听我慢慢道来.从2个名词开始说起：向上转型(upcasting) 、向下转型(downcasting).举个例子：有2个类，Father是父类，Son类继承自Father。Father f1 = new Son(); // 这就叫 upcasting （向上转型)// 现在f1引用指向一个Son对象">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-28T08:09:04.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="向上转型(java 转型问题)">
+<meta name="twitter:description" content="java 转型问题其实并不复杂，只要记住一句话：父类引用指向子类对象。什么叫父类引用指向子类对象，且听我慢慢道来.从2个名词开始说起：向上转型(upcasting) 、向下转型(downcasting).举个例子：有2个类，Father是父类，Son类继承自Father。Father f1 = new Son(); // 这就叫 upcasting （向上转型)// 现在f1引用指向一个Son对象">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-向上转型-java-转型问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-向上转型-java-转型问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/28/向上转型-java-转型问题/" class="article-date">
   <time datetime="2019-06-28T08:07:42.000Z" itemprop="datePublished">2019-06-28</time>
@@ -75,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/28/向上转型-java-转型问题/">向上转型(java 转型问题)</a>
+    <h1 class="article-title" itemprop="name">
+      向上转型(java 转型问题)
     </h1>
   
 
@@ -95,136 +97,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-param" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/10/param/" class="article-date">
-  <time datetime="2019-06-10T08:55:50.000Z" itemprop="datePublished">2019-06-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/10/param/">param</a>
-    </h1>
+    <a href="/2019/06/10/param/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">param</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>${param.name} == request.getParam(“name”)<br>${name} == request.getAttribute(“name”).</p>
-<p>getParam是表单的值或者是url中传来的值，如/login.action?attid=${attId}<br>getAttribute是设置在requestScope里的值</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjxftpwcu0003f0ypibna10uk" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Hello-World-0" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/10/Hello-World-0/" class="article-date">
-  <time datetime="2019-06-10T08:25:07.000Z" itemprop="datePublished">2019-06-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/10/Hello-World-0/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjxftpwcl0000f0ypoevqvyeu" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/06/10/hello-world/" class="article-date">
-  <time datetime="2019-06-10T07:59:34.568Z" itemprop="datePublished">2019-06-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjxftpwcq0001f0ypzylhkpcj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
