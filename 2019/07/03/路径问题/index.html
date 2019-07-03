@@ -5,15 +5,19 @@
   
 
   
-  <title>Archives: 2019 | Hexo</title>
+  <title>路径问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="路径问题">
+<meta property="og:url" content="http://yoursite.com/2019/07/03/路径问题/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-03T02:59:01.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="路径问题">
+<meta name="twitter:description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,116 +64,59 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/07/03/路径问题/" class="archive-article-date">
-  <time datetime="2019-07-03T02:57:27.000Z" itemprop="datePublished">Jul 3</time>
+        <section id="main"><article id="post-路径问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/03/路径问题/" class="article-date">
+  <time datetime="2019-07-03T02:57:27.000Z" itemprop="datePublished">2019-07-03</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/03/路径问题/">路径问题</a>
+    <h1 class="article-title" itemprop="name">
+      路径问题
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/28/向上转型-java-转型问题/" class="archive-article-date">
-  <time datetime="2019-06-28T08:07:42.000Z" itemprop="datePublished">Jun 28</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/28/向上转型-java-转型问题/">向上转型(java 转型问题)</a>
-    </h1>
-  
+        <p>${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。<br>①完全匹配：以“/”开头，以字母（非“*”）结束</p>
+<p>   如：上面提到的本项目中：<url-pattern>/servlet/addBookServlet</url-pattern></p>
+<p>②目录匹配：以“/”开头且以“/*”结尾</p>
+<p>   如：<url-pattern>/test/*</url-pattern></p>
+<p>   <url-pattern>/*</url-pattern></p>
+<p>③扩展名匹配：以“*.”开头，以扩展名结束</p>
+<p>   如：<url-pattern>*.do</url-pattern></p>
+<p>④“/”用来表明对应的Servlet为应用默认的Servlet。在这种情况下Servlet路径是请求的URI去掉上下文路径并且路径信息为null。</p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/10/param/" class="archive-article-date">
-  <time datetime="2019-06-10T08:55:50.000Z" itemprop="datePublished">Jun 10</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/10/param/">param</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/10/Hello-World-0/" class="archive-article-date">
-  <time datetime="2019-06-10T08:25:07.000Z" itemprop="datePublished">Jun 10</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxmnk5n70004j8ypzen2fgr4" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/10/Hello-World-0/">Hello World</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2019/06/10/hello-world/" class="archive-article-date">
-  <time datetime="2019-06-10T07:59:34.568Z" itemprop="datePublished">Jun 10</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-    </header>
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/06/28/向上转型-java-转型问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">向上转型(java 转型问题)</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         
