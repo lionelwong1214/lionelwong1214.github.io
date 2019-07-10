@@ -62,6 +62,49 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-xml配置问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/10/xml配置问题/" class="article-date">
+  <time datetime="2019-07-10T11:14:09.000Z" itemprop="datePublished">2019-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/10/xml配置问题/">xml配置问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在配置一个访问数据库的Url时，第一次设置的内容如下：</p>
+<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8，注意中间那个“&amp;”，在xml中这个是读不出的，正确写法将“&amp;”转义“&amp;”：</p>
+<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8</p>
+<p>分析：</p>
+<p>有时候在使用xml作为配置文件的时候，应该要使用xml的编码规则来进行适当的设置。</p>
+<p>下面给出xml中一些特殊符号的编码转换：</p>
+<p> &lt;     &lt;     小于号<br> &gt;     &gt;     大于号<br> &amp;     &amp;     and字符<br> &apos;     ‘     单引号<br> &quot;     “     双引号</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjxx5cfnm00033oypw740tvph" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-获取项目的绝对路径和端口号" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/03/获取项目的绝对路径和端口号/" class="article-date">
@@ -90,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjxmnwh820005cgypo99v83xj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjxx5cfnp00053oypz8pvkwbs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -134,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxmnwh850008cgyp2arwd9w2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxx5cfp500083oypjv7urnfu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjxmnwh830006cgypycu0d7vi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjxx5cfqu00093oyp1rztu8cq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -209,7 +252,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjxmnwh810004cgyp5x6t7r9w" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjxx5cfni00013oyp1bvzlsbk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +288,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjxmnwh7s0000cgypxz3jh6n0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjxx5cfnd00003oypwf37dz65" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
@@ -296,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjxmnwh7x0002cgypemava0vm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjxx5cfnn00043oyp9mxo58f7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -351,6 +394,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/10/xml配置问题/">xml配置问题</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/03/获取项目的绝对路径和端口号/">获取项目的绝对路径和端口号</a>
           </li>
         
@@ -364,10 +411,6 @@
         
           <li>
             <a href="/2019/06/10/param/">param</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/10/Hello-World-0/">Hello World</a>
           </li>
         
       </ul>

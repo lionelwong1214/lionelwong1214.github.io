@@ -5,19 +5,19 @@
   
 
   
-  <title>路径问题 | Hexo</title>
+  <title>xml配置问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
+  <meta name="description" content="在配置一个访问数据库的Url时，第一次设置的内容如下： jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;amp;characterEncoding=UTF-8，注意中间那个“&amp;amp;”，在xml中这个是读不出的，正确写法将“&amp;amp;”转义“&amp;amp;”： jdbc:mysql://localhost:3306/photo?useUnicode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="路径问题">
-<meta property="og:url" content="http://yoursite.com/2019/07/03/路径问题/index.html">
+<meta property="og:title" content="xml配置问题">
+<meta property="og:url" content="http://yoursite.com/2019/07/10/xml配置问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
+<meta property="og:description" content="在配置一个访问数据库的Url时，第一次设置的内容如下： jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;amp;characterEncoding=UTF-8，注意中间那个“&amp;amp;”，在xml中这个是读不出的，正确写法将“&amp;amp;”转义“&amp;amp;”： jdbc:mysql://localhost:3306/photo?useUnicode">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-03T02:59:01.311Z">
+<meta property="og:updated_time" content="2019-07-10T11:14:41.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="路径问题">
-<meta name="twitter:description" content="${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。①完全匹配：以“/”开头，以字母（非“*”）结束    如：上面提到的本项目中：/servlet/addBookServlet ②目录匹配：以“/”开头且以“/*”结尾    如：/test/*    /* ③扩展名匹配：以“*.”开头，以扩展名结束    如：*.">
+<meta name="twitter:title" content="xml配置问题">
+<meta name="twitter:description" content="在配置一个访问数据库的Url时，第一次设置的内容如下： jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;amp;characterEncoding=UTF-8，注意中间那个“&amp;amp;”，在xml中这个是读不出的，正确写法将“&amp;amp;”转义“&amp;amp;”： jdbc:mysql://localhost:3306/photo?useUnicode">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-路径问题" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-xml配置问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/03/路径问题/" class="article-date">
-  <time datetime="2019-07-03T02:57:27.000Z" itemprop="datePublished">2019-07-03</time>
+    <a href="/2019/07/10/xml配置问题/" class="article-date">
+  <time datetime="2019-07-10T11:14:09.000Z" itemprop="datePublished">2019-07-10</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      路径问题
+      xml配置问题
     </h1>
   
 
@@ -86,19 +86,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。<br>①完全匹配：以“/”开头，以字母（非“*”）结束</p>
-<p>   如：上面提到的本项目中：<url-pattern>/servlet/addBookServlet</url-pattern></p>
-<p>②目录匹配：以“/”开头且以“/*”结尾</p>
-<p>   如：<url-pattern>/test/*</url-pattern></p>
-<p>   <url-pattern>/*</url-pattern></p>
-<p>③扩展名匹配：以“*.”开头，以扩展名结束</p>
-<p>   如：<url-pattern>*.do</url-pattern></p>
-<p>④“/”用来表明对应的Servlet为应用默认的Servlet。在这种情况下Servlet路径是请求的URI去掉上下文路径并且路径信息为null。</p>
+        <p>在配置一个访问数据库的Url时，第一次设置的内容如下：</p>
+<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8，注意中间那个“&amp;”，在xml中这个是读不出的，正确写法将“&amp;”转义“&amp;”：</p>
+<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8</p>
+<p>分析：</p>
+<p>有时候在使用xml作为配置文件的时候，应该要使用xml的编码规则来进行适当的设置。</p>
+<p>下面给出xml中一些特殊符号的编码转换：</p>
+<p> &lt;     &lt;     小于号<br> &gt;     &gt;     大于号<br> &amp;     &amp;     and字符<br> &apos;     ‘     单引号<br> &quot;     “     双引号</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxx5cfp500083oypjv7urnfu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjxx5cfnm00033oypw740tvph" class="article-share-link">Share</a>
       
       
     </footer>
@@ -107,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/07/03/获取项目的绝对路径和端口号/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          获取项目的绝对路径和端口号
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/28/向上转型-java-转型问题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/03/获取项目的绝对路径和端口号/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">向上转型(java 转型问题)</div>
+      <div class="article-nav-title">获取项目的绝对路径和端口号</div>
     </a>
   
 </nav>
