@@ -62,6 +62,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-遇到有关-Resource注入的问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/10/遇到有关-Resource注入的问题/" class="article-date">
+  <time datetime="2019-07-10T14:54:11.000Z" itemprop="datePublished">2019-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/10/遇到有关-Resource注入的问题/">遇到有关@Resource注入的问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>@Resource(name = &quot;accountDao&quot;)
+private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(AccountDao accountDao) {<br>//        this.accountDao = accountDao;<br>//    }<br>网上说用了@Resource可以直接使用其set和get方法，但是注释掉了之后会报错<br>Invalid property ‘accountDao’ of bean class [com.wkc.demo1.AccountServiceImpl]: Bean property ‘accountDao’ is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?</p>
+<p>applicationContext.xml 如下</p>
+<!-- 配置业务层和持久层 -->
+<pre><code>&lt;bean id=&quot;accountService&quot; class=&quot;com.wkc.demo1.AccountServiceImpl&quot;&gt;
+    &lt;property name=&quot;accountDao&quot; ref=&quot;accountDao&quot;/&gt;
+    &lt;!-- &lt;property name=&quot;transactionTemplate&quot; ref=&quot;transactionTemplate&quot;/&gt; --&gt;
+&lt;/bean&gt;
+
+&lt;bean id=&quot;accountDao&quot; class=&quot;com.wkc.demo1.AccountDaoImpl&quot;&gt;
+    &lt;!-- &lt;property name=&quot;jdbcTemplate&quot; ref=&quot;jdbcTemplate&quot;/&gt; --&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/10/遇到有关-Resource注入的问题/" data-id="cjxxdcfw50009l8ypgfjzsy4m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-xml配置问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/10/xml配置问题/" class="article-date">
@@ -90,12 +137,12 @@
 <p>分析：</p>
 <p>有时候在使用xml作为配置文件的时候，应该要使用xml的编码规则来进行适当的设置。</p>
 <p>下面给出xml中一些特殊符号的编码转换：</p>
-<p> &lt;     &lt;     小于号<br> &gt;     &gt;     大于号<br> &amp;     &amp;     and字符<br> &apos;     ‘     单引号<br> &quot;     “     双引号</p>
+<p> “&lt;”     &lt;     小于号<br> “&gt;”     &gt;     大于号<br> “&amp;”     &amp;     and字符<br> “&apos;”     ‘     单引号<br> “&quot;”     “     双引号</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjxx5cfnm00033oypw740tvph" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjxxdcfvw0004l8yptn76moaf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjxx5cfnp00053oypz8pvkwbs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjxxdcfw30007l8ypgl7jkajq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +224,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxx5cfp500083oypjv7urnfu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjxxdcfw40008l8ypjg0kea30" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjxx5cfqu00093oyp1rztu8cq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjxxdcfvy0005l8ypeehpqm93" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,7 +299,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjxx5cfni00013oyp1bvzlsbk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjxxdcfvk0000l8ypk5ed4ztg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjxx5cfnd00003oypwf37dz65" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjxxdcfvp0001l8ypwm3i1mre" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
@@ -339,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjxx5cfnn00043oyp9mxo58f7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjxxdcfvs0002l8yp3h6woh4z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,6 +441,10 @@
       <ul>
         
           <li>
+            <a href="/2019/07/10/遇到有关-Resource注入的问题/">遇到有关@Resource注入的问题</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/10/xml配置问题/">xml配置问题</a>
           </li>
         
@@ -407,10 +458,6 @@
         
           <li>
             <a href="/2019/06/28/向上转型-java-转型问题/">向上转型(java 转型问题)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/06/10/param/">param</a>
           </li>
         
       </ul>
