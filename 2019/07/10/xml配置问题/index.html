@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="在配置一个访问数据库的Url时，第一次设置的内容如下： jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;amp;characterEncoding=UTF-8，注意中间那个“&amp;amp;”，在xml中这个是读不出的，正确写法将“&amp;amp;”转义“&amp;amp;”： jdbc:mysql://localhost:3306/photo?useUnicode">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-10T14:58:42.723Z">
+<meta property="og:updated_time" content="2019-07-11T02:13:29.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xml配置问题">
 <meta name="twitter:description" content="在配置一个访问数据库的Url时，第一次设置的内容如下： jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;amp;characterEncoding=UTF-8，注意中间那个“&amp;amp;”，在xml中这个是读不出的，正确写法将“&amp;amp;”转义“&amp;amp;”： jdbc:mysql://localhost:3306/photo?useUnicode">
@@ -92,7 +92,7 @@
 <p>分析：</p>
 <p>有时候在使用xml作为配置文件的时候，应该要使用xml的编码规则来进行适当的设置。</p>
 <p>下面给出xml中一些特殊符号的编码转换：</p>
-<p> “&lt;”     &lt;     小于号<br> “&gt;”     &gt;     大于号<br> “&amp;”     &amp;     and字符<br> “&apos;”     ‘     单引号<br> “&quot;”     “     双引号</p>
+<p> ‘&lt;’     &lt;     小于号<br> ‘&gt;’         &gt;     大于号<br> ‘&amp;’     &amp;     and字符<br> ‘&apos;’     ‘     单引号<br> ‘&quot;’     “     双引号</p>
 
       
     </div>
