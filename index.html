@@ -62,6 +62,134 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-HttpServletResponse的应用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/14/HttpServletResponse的应用/" class="article-date">
+  <time datetime="2019-07-14T07:47:02.000Z" itemprop="datePublished">2019-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/14/HttpServletResponse的应用/">HttpServletResponse的应用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。获取网页提交过来的数据，只需要找request对象就行了。要向网页输出数据，只需要找response对象。</p>
+<h1 id="一-HttpServletResponse对象"><a href="#一-HttpServletResponse对象" class="headerlink" title="一.HttpServletResponse对象"></a>一.HttpServletResponse对象</h1><p>HttpServletResponse对象代表服务器的响应。这个对象中封装了向客户端发送数据、发送响应头，发送响应状态码的方法。</p>
+<h1 id="二-HttpServletResponse对象常用方法"><a href="#二-HttpServletResponse对象常用方法" class="headerlink" title="二.HttpServletResponse对象常用方法"></a>二.HttpServletResponse对象常用方法</h1><h2 id="1，负责向客户端-浏览器-发送数据的相关方法"><a href="#1，负责向客户端-浏览器-发送数据的相关方法" class="headerlink" title="1，负责向客户端(浏览器)发送数据的相关方法"></a>1，负责向客户端(浏览器)发送数据的相关方法</h2><p>getOutputStream()<br>该方法用于返回Servlet引擎创建的字节输出流对象，Servlet程序可以按字节形式输出响应正文。</p>
+<p>getWriter()<br>该方法用于返回Servlet引擎创建的字符输出流对象，Servlet程序可以按字符形式输出响应正文。</p>
+<p><strong>注意：</strong></p>
+<p>1，getOutputStream()和getWriter()这两个方法互相排斥，调用了其中的任何一个方法后，就不能再调用另一方法。<br>2，getOutputStream()返回的字节输出流对象，类型为：ServletOutputStream，直接输出字节数组中的二进制数据。<br>3，getWriter()方法将Servlet引擎的数据缓冲区包装成P：rintWriter类型的字符输出流对象后返回，PrintWriter对象只能输出字符文本内容。</p>
+<h2 id="2，负责向客户端-浏览器-发送响应头的相关方法"><a href="#2，负责向客户端-浏览器-发送响应头的相关方法" class="headerlink" title="2，负责向客户端(浏览器)发送响应头的相关方法"></a>2，负责向客户端(浏览器)发送响应头的相关方法</h2><p>addDateHeader(String name ,long date)<br>该方法是设置只有一个值且值的类型为long类型的响应头,例如expies响应头,表示过期时间</p>
+<p>addHeader(String name,String value)<br>该方法是设置有多个值的响应头,参数name表示响应头名称,参数value表示响应头的值</p>
+<p>addIntHeader(String name,int value)<br>该方法是设置有多个值且值的类型为int类型的响应头</p>
+<p>setHeader(String name,String value)<br>该方法是设置只有一个值的响应头,参数name表示响应头名称,参数value表示响应头的值</p>
+<p>setDateHeader(String name,long value)<br>该方法是设置只有一个值且值的类型为long类型的响应头,例如expies响应头,表示过期时间</p>
+<p>setIntHeader(String name,int value)<br>该方法是设置只有一个值且值的类型为int类型的响应头,例如Content-Length响应头,该响应头是代表响应内容有多少字节数</p>
+<p><code>//设置Content-Type响应头
+resp.setHeader(&quot;Content-Type&quot;,&quot;text/html;charset=utf-8&quot;);
+//添加一个响应头：xxx是表示某一响应头
+resp.addHeader(&quot;xxx&quot;, &quot;123&quot;);
+//通知客户端响应内容长度为888个字节
+resp.setIntHeader(&quot;Context-Length&quot;, 5);
+//设置过期时间为:5000毫秒
+resp.setDateHeader(&quot;&quot;, 5000);</code></p>
+<h2 id="3，负责向客户端-浏览器-发送响应状态码的相关方法"><a href="#3，负责向客户端-浏览器-发送响应状态码的相关方法" class="headerlink" title="3，负责向客户端(浏览器)发送响应状态码的相关方法"></a>3，负责向客户端(浏览器)发送响应状态码的相关方法</h2><p>setStatus(int value)<br>设置临时定向响应码</p>
+<h2 id="4，响应状态码的常量"><a href="#4，响应状态码的常量" class="headerlink" title="4，响应状态码的常量"></a>4，响应状态码的常量</h2><p>HttpServletResponse定义了很多状态码的常量(具体可以查看Servlet的API)，当需要向客户端发送响应状态码时，可以使用这些常量，避免了直接写数字，常见的状态码对应的常量：</p>
+<p>SC_NOT_FOUND<br>状态码404对应的常量</p>
+<p>SC_OK<br>状态码200对应的常量</p>
+<p>SC_INIERNAL_SERVER_ERROR<br>状态码500对应的常量</p>
+<h1 id="三，HttpServletResponse对象常见应用"><a href="#三，HttpServletResponse对象常见应用" class="headerlink" title="三，HttpServletResponse对象常见应用"></a>三，HttpServletResponse对象常见应用</h1><p>1，向客户端浏览器输出数据<br>例子1：使用OutputStream流向客户端浏览器输出数据<br>`public class HelloResponse extends HttpServlet{</p>
+<pre><code>private static final long serialVersionUID = 3903946972744326948L;
+
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    this.doPost(req, resp);
+}
+
+@Override
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    //设置Content-Type响应头，编码格式为UTF-8
+    resp.setHeader(&quot;Content-Type&quot;,&quot;text/html;charset=utf-8&quot;);
+    outPutOutputStream(resp);
+}
+/**
+ * 
+ * @方法名: outPutOutputStream
+ * @描述: 使用OutputStream输出流输出数据
+ * @param resp
+ * @throws IOException 
+ * @创建人 zender
+ */
+private void outPutOutputStream(HttpServletResponse resp) throws IOException{
+    String data = &quot;输出的内容&quot;;
+    //获取OutputStream输出流
+    OutputStream outputStream = resp.getOutputStream();
+    //将字符转换成字节数组，指定以UTF-8编码进行转换
+    byte[] dataByteArr = data.getBytes(&quot;UTF-8&quot;);
+    //使用OutputStream流向客户端输出字节数组
+    outputStream.write(dataByteArr);
+}</code></pre><p>}`</p>
+<p>例子2：使用PrintWriter流向客户端浏览器输出数据<br>`public class PrintWriterResponse extends HttpServlet{</p>
+<pre><code>private static final long serialVersionUID = 3903946972744326948L;
+
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    this.doPost(req, resp);
+}
+
+@Override
+protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    //设置编码格式为UTF-8
+    resp.setCharacterEncoding(&quot;UTF-8&quot;);
+    //通过设置响应头控制浏览器以UTF-8的编码显示数据，如果不加这句话，那么浏览器显示的将是乱码
+    resp.setHeader(&quot;content-type&quot;, &quot;text/html;charset=UTF-8&quot;);
+    outPutPrintWriter(resp);
+}
+/**
+ * 
+ * @方法名: outPutPrintWriter
+ * @描述: 使用PrintWriter输出流输出数据
+ * @param resp
+ * @throws IOException 
+ * @创建人 zender
+ */
+private void outPutPrintWriter(HttpServletResponse resp) throws IOException{
+    String data = &quot;输出的内容&quot;;
+    //获取PrintWriter输出流
+    PrintWriter out = resp.getWriter();
+    //使用PrintWriter流向客户端输出字符
+    out.write(data);
+}</code></pre><p>}`</p>
+<p>注意：<br>1，在获取PrintWriter输出流之前首先使用”response.setCharacterEncoding(charset)”设置字符以什么样的编码输出到浏览器，再使用response.getWriter();获取PrintWriter输出流，这两个步骤不能颠倒。<br>2，在开发过程中，如果希望服务器输出什么浏览器就能看到什么，那么在服务器端都要以字符串的形式进行输出。</p>
+<p>原作者:</p>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/8bc6b82403c5" target="_blank" rel="noopener">https://www.jianshu.com/p/8bc6b82403c5</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/14/HttpServletResponse的应用/" data-id="cjy2o1aoo0002swypqm6tghx3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-struts2中实现ModelDriven接口作用" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/12/struts2中实现ModelDriven接口作用/" class="article-date">
@@ -90,7 +218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/" data-id="cjy05ae320004gcyp2uxusz6s" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/" data-id="cjy2o1ap2000aswyp0hj6fw3h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +265,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/遇到有关-Resource注入的问题/" data-id="cjy05ae3c000bgcyph9w4kpc7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/遇到有关-Resource注入的问题/" data-id="cjy2o1aot0005swyprj1buhgs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -180,7 +308,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjy05ae360006gcyp1c908ggl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjy2o1aor0004swyp6u5o9alx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -218,7 +346,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjy05ae380008gcypw77co4tc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjy2o1ap10009swyp2oswi32f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,7 +390,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjy05ae3b000agcypdxkk5qbr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjy2o1aq5000bswyp8ekh813s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -299,7 +427,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjy05ae370007gcypc5llhdgw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjy2o1aqc000cswypr0ec1jny" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +465,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjy05ae2z0002gcyp1gfkhswk" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjy2o1aoh0000swyphu3rwku5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +501,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjy05ae310003gcypmmxdo24p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjy2o1aol0001swypdliwj48r" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
@@ -424,7 +552,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjy05ae2t0000gcyp01nzsfdh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjy2o1aoz0007swyptyjr9kma" class="article-share-link">Share</a>
       
       
     </footer>
@@ -479,6 +607,10 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       <ul>
         
           <li>
+            <a href="/2019/07/14/HttpServletResponse的应用/">HttpServletResponse的应用</a>
+          </li>
+        
+          <li>
             <a href="/2019/07/12/struts2中实现ModelDriven接口作用/">struts2中实现ModelDriven接口作用</a>
           </li>
         
@@ -492,10 +624,6 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
         
           <li>
             <a href="/2019/07/03/获取项目的绝对路径和端口号/">获取项目的绝对路径和端口号</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/03/路径问题/">路径问题</a>
           </li>
         
       </ul>
