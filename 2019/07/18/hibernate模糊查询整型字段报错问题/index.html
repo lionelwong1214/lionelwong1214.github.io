@@ -5,19 +5,20 @@
   
 
   
-  <title>struts2中实现ModelDriven接口作用 | Hexo</title>
+  <title>hibernate模糊查询整型字段报错问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="例子public class CustomerAction extends ActionSupport implements ModelDriven {    private Customer customer=new Customer();    @Override    public Customer getModel() {        return customer;    }    /">
+  <meta name="description" content="想通过 DetachedCriteria 做一个多条件模糊查询，但是只要想查询的字段是integer类型的，就会报java.lang.String cannot be cast to java.lang.Integer。经过一番资料查找，找到问题所在，hibernate模糊查找默认不支持int类型字段，需要用cast函数转型具体见自己写的CSDN博客：  https://blog.csdn.net">
+<meta name="keywords" content="bugs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="struts2中实现ModelDriven接口作用">
-<meta property="og:url" content="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/index.html">
+<meta property="og:title" content="hibernate模糊查询整型字段报错问题">
+<meta property="og:url" content="http://yoursite.com/2019/07/18/hibernate模糊查询整型字段报错问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="例子public class CustomerAction extends ActionSupport implements ModelDriven {    private Customer customer=new Customer();    @Override    public Customer getModel() {        return customer;    }    /">
+<meta property="og:description" content="想通过 DetachedCriteria 做一个多条件模糊查询，但是只要想查询的字段是integer类型的，就会报java.lang.String cannot be cast to java.lang.Integer。经过一番资料查找，找到问题所在，hibernate模糊查找默认不支持int类型字段，需要用cast函数转型具体见自己写的CSDN博客：  https://blog.csdn.net">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-12T12:09:58.226Z">
+<meta property="og:updated_time" content="2019-07-28T07:41:07.286Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="struts2中实现ModelDriven接口作用">
-<meta name="twitter:description" content="例子public class CustomerAction extends ActionSupport implements ModelDriven {    private Customer customer=new Customer();    @Override    public Customer getModel() {        return customer;    }    /">
+<meta name="twitter:title" content="hibernate模糊查询整型字段报错问题">
+<meta name="twitter:description" content="想通过 DetachedCriteria 做一个多条件模糊查询，但是只要想查询的字段是integer类型的，就会报java.lang.String cannot be cast to java.lang.Integer。经过一番资料查找，找到问题所在，hibernate模糊查找默认不支持int类型字段，需要用cast函数转型具体见自己写的CSDN博客：  https://blog.csdn.net">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-struts2中实现ModelDriven接口作用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-hibernate模糊查询整型字段报错问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/12/struts2中实现ModelDriven接口作用/" class="article-date">
-  <time datetime="2019-07-12T12:07:42.000Z" itemprop="datePublished">2019-07-12</time>
+    <a href="/2019/07/18/hibernate模糊查询整型字段报错问题/" class="article-date">
+  <time datetime="2019-07-18T13:40:58.000Z" itemprop="datePublished">2019-07-18</time>
 </a>
     
   </div>
@@ -78,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      struts2中实现ModelDriven接口作用
+      hibernate模糊查询整型字段报错问题
     </h1>
   
 
@@ -86,34 +87,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>例子<br>public class CustomerAction extends ActionSupport implements ModelDriven<customer> {<br>    private Customer customer=new Customer();<br>    @Override<br>    public Customer getModel() {<br>        return customer;<br>    }<br>    //添加客户信息<br>    public String addCustomer(){<br>        customerService.saveCustomer(customer);<br>        return “addCustomer”;<br>    }<br>}</customer></p>
-<p>当接收提交的表单信息时，实现了ModelDriven接口的action可以直接获取对应的Customer实例对象，它会将Object getModel()方法取得的输入数据的对象模型，这样就<strong>不用实现实体类中属性的getter()和setter()方法了</strong>。但是使用要注意：<strong>必须在action中对实体类进行new操作。</strong></p>
+        <p>想通过 DetachedCriteria 做一个多条件模糊查询，但是只要想查询的字段是integer类型的，就会报java.lang.String cannot be cast to java.lang.Integer。<br>经过一番资料查找，找到问题所在，hibernate模糊查找默认不支持int类型字段，需要用cast函数转型<br>具体见自己写的CSDN博客：</p>
+<blockquote>
+<p><a href="https://blog.csdn.net/weixin_44222848/article/details/96184810" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44222848/article/details/96184810</a></p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/" data-id="cjymnnf2z000cm0yp2mcrwe9b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/18/hibernate模糊查询整型字段报错问题/" data-id="cjymnnf2m0004m0ypuj07fmrh" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/07/14/HttpServletResponse的应用/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/28/mybatis-遇到的问题/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          HttpServletResponse的应用
+          mybatis 遇到的问题
         
       </div>
     </a>
   
   
-    <a href="/2019/07/10/遇到有关-Resource注入的问题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/14/HttpServletResponse的应用/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">遇到有关@Resource注入的问题</div>
+      <div class="article-nav-title">HttpServletResponse的应用</div>
     </a>
   
 </nav>
