@@ -5,19 +5,19 @@
   
 
   
-  <title>获取项目的绝对路径和端口号 | Hexo</title>
+  <title>footer.ejs原始文件 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;lt;%    String path = request.getContextPath();    String basePath = request.getScheme()+”://“+request.getServerName()+”:”+request.getServerPort()+path+”/“;%&amp;gt; 把项目中的${pageContext.request.contextPat">
+  <meta name="description" content="&amp;lt;footer id=&amp;quot;footer&amp;quot;&amp;gt;   &amp;lt;% if (theme.sidebar === &amp;apos;bottom&amp;apos;){ %&amp;gt; &amp;lt;%- partial(&amp;apos;_partial/sidebar&amp;apos;) %&amp;gt;   &amp;lt;% } %&amp;gt;   &amp;lt;div class=&amp;quot;outer&amp;quot;&amp;gt; &amp;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="获取项目的绝对路径和端口号">
-<meta property="og:url" content="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/index.html">
+<meta property="og:title" content="footer.ejs原始文件">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/footer-ejs原始文件/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="&amp;lt;%    String path = request.getContextPath();    String basePath = request.getScheme()+”://“+request.getServerName()+”:”+request.getServerPort()+path+”/“;%&amp;gt; 把项目中的${pageContext.request.contextPat">
+<meta property="og:description" content="&amp;lt;footer id=&amp;quot;footer&amp;quot;&amp;gt;   &amp;lt;% if (theme.sidebar === &amp;apos;bottom&amp;apos;){ %&amp;gt; &amp;lt;%- partial(&amp;apos;_partial/sidebar&amp;apos;) %&amp;gt;   &amp;lt;% } %&amp;gt;   &amp;lt;div class=&amp;quot;outer&amp;quot;&amp;gt; &amp;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-03T03:08:38.877Z">
+<meta property="og:updated_time" content="2019-08-01T07:02:21.497Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="获取项目的绝对路径和端口号">
-<meta name="twitter:description" content="&amp;lt;%    String path = request.getContextPath();    String basePath = request.getScheme()+”://“+request.getServerName()+”:”+request.getServerPort()+path+”/“;%&amp;gt; 把项目中的${pageContext.request.contextPat">
+<meta name="twitter:title" content="footer.ejs原始文件">
+<meta name="twitter:description" content="&amp;lt;footer id=&amp;quot;footer&amp;quot;&amp;gt;   &amp;lt;% if (theme.sidebar === &amp;apos;bottom&amp;apos;){ %&amp;gt; &amp;lt;%- partial(&amp;apos;_partial/sidebar&amp;apos;) %&amp;gt;   &amp;lt;% } %&amp;gt;   &amp;lt;div class=&amp;quot;outer&amp;quot;&amp;gt; &amp;">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-获取项目的绝对路径和端口号" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-footer-ejs原始文件" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/03/获取项目的绝对路径和端口号/" class="article-date">
-  <time datetime="2019-07-03T03:07:48.000Z" itemprop="datePublished">2019-07-03</time>
+    <a href="/2019/08/01/footer-ejs原始文件/" class="article-date">
+  <time datetime="2019-08-01T07:01:32.000Z" itemprop="datePublished">2019-08-01</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      获取项目的绝对路径和端口号
+      footer.ejs原始文件
     </h1>
   
 
@@ -86,13 +86,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&lt;%<br>    String path = request.getContextPath();<br>    String basePath = request.getScheme()+”://“+request.getServerName()+”:”+request.getServerPort()+path+”/“;<br>%&gt;</p>
-<p>把项目中的${pageContext.request.contextPath}都替换成&lt;%=basePath%&gt;即可</p>
-
+        <pre><code>&lt;footer id=&quot;footer&quot;&gt;
+  &lt;% if (theme.sidebar === &apos;bottom&apos;){ %&gt;
+&lt;%- partial(&apos;_partial/sidebar&apos;) %&gt;
+  &lt;% } %&gt;
+  &lt;div class=&quot;outer&quot;&gt;
+&lt;div id=&quot;footer-info&quot; class=&quot;inner&quot;&gt;
+  &amp;copy; &lt;%= date(new Date(), &apos;YYYY&apos;) %&lt;%= config.author || config.title %&gt;&lt;br&gt;
+  &lt;%= __(&apos;powered_by&apos;) %&lt;a href=&quot;http://hexo.io/&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/03/获取项目的绝对路径和端口号/" data-id="cjyscmtcv000e3syppy904tmq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/01/footer-ejs原始文件/" data-id="cjyscmtcd00013syp3c910eni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -101,19 +109,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/07/10/xml配置问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          xml配置问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/07/03/路径问题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/07/28/mybatis-遇到的问题/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">路径问题</div>
+      <div class="article-nav-title">mybatis 遇到的问题</div>
     </a>
   
 </nav>
