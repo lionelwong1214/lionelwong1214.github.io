@@ -62,6 +62,43 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-向上转型-java-转型问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/06/28/向上转型-java-转型问题/" class="article-date">
+  <time datetime="2019-06-28T08:07:42.000Z" itemprop="datePublished">2019-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/28/向上转型-java-转型问题/">向上转型(java 转型问题)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>java 转型问题其实并不复杂，只要记住一句话：父类引用指向子类对象。<br>什么叫父类引用指向子类对象，且听我慢慢道来.<br>从2个名词开始说起：向上转型(upcasting) 、向下转型(downcasting).<br>举个例子：有2个类，Father是父类，Son类继承自Father。<br>Father f1 = new Son(); // 这就叫 upcasting （向上转型)<br>// 现在f1引用指向一个Son对象<br>Son s1 = (Son)f1; // 这就叫 downcasting (向下转型)<br>// 现在f1还是指向Son对象<br>第2个例子：<br>Father f2 = new Father();<br>Son s2 = (Son)f2; // 出错，子类引用不能指向父类对象<br>你或许会问，第1个例子中：Son s1 = (Son)f1;问什么 是正确的呢。<br>很简单因为f1指向一个子类对象，Father f1 = new Son(); 子类s1引用当然可以指向子类对象了。<br>而f2 被传给了一个Father对象，Father f2 = new Father（）；子类s1引用不能指向父类对象。<br>总结：<br>1。父类引用指向子类对象，而子类引用不能指向父类对象。<br>2。把子类对象直接赋给父类引用叫upcasting向上转型，向上转型不用强制转换。<br>如：Father f1 = new Son();<br>3。把指向子类对象的父类引用赋给子类引用叫向下转型(downcasting)，要强制转换。<br>如：f1 就是一个指向子类对象的父类引用。把f1赋给子类引用s1即 Son s1 = (Son)f1；<br>其中f1前面的(Son)必须加上，进行强制转换。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjz45nk9t000lyoypd0wfgb6m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-param" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/10/param/" class="article-date">
@@ -90,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjyscmtcm00053sypgrkyhmc4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjz45nk8d0009yoypybjpd6wt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -126,7 +163,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjyscmtc600003syp4295gdqb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjz45nk7x0000yoyp76syupca" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
@@ -177,7 +214,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjyscmtcu000d3sypz5uwpo1f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjz45nk890005yoypqhgy6g79" class="article-share-link">Share</a>
       
       
     </footer>
@@ -237,6 +274,10 @@
       <ul>
         
           <li>
+            <a href="/2019/08/08/Maven-JVM-Bind问题/">Maven JVM_Bind问题</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/01/footer-ejs原始文件/">footer.ejs原始文件</a>
           </li>
         
@@ -250,10 +291,6 @@
         
           <li>
             <a href="/2019/07/14/HttpServletResponse的应用/">HttpServletResponse的应用</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/12/struts2中实现ModelDriven接口作用/">struts2中实现ModelDriven接口作用</a>
           </li>
         
       </ul>
