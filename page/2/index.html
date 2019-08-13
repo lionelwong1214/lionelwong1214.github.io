@@ -62,6 +62,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-路径问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/03/路径问题/" class="article-date">
+  <time datetime="2019-07-03T02:57:27.000Z" itemprop="datePublished">2019-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/03/路径问题/">路径问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>${pageContext.request.contextPath}用于解决使用相对路径时出现的问题，它的作用是取出所部署项目的名字。<br>①完全匹配：以“/”开头，以字母（非“*”）结束</p>
+<p>   如：上面提到的本项目中：<url-pattern>/servlet/addBookServlet</url-pattern></p>
+<p>②目录匹配：以“/”开头且以“/*”结尾</p>
+<p>   如：<url-pattern>/test/*</url-pattern></p>
+<p>   <url-pattern>/*</url-pattern></p>
+<p>③扩展名匹配：以“*.”开头，以扩展名结束</p>
+<p>   如：<url-pattern>*.do</url-pattern></p>
+<p>④“/”用来表明对应的Servlet为应用默认的Servlet。在这种情况下Servlet路径是请求的URI去掉上下文路径并且路径信息为null。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/07/03/路径问题/" data-id="cjz9lg2en000np0yp8rpuamuc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-向上转型-java-转型问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/06/28/向上转型-java-转型问题/" class="article-date">
@@ -89,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjz45nk9t000lyoypd0wfgb6m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/28/向上转型-java-转型问题/" data-id="cjz9lg2em000mp0ypevyjqfqr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -127,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjz45nk8d0009yoypybjpd6wt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjz9lg2c4000bp0yppzibyifg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,7 +207,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjz45nk7x0000yoyp76syupca" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/Hello-World-0/" data-id="cjz9lg2bv0002p0ypm36e4w8c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/My-first-blog/">My first blog</a></li></ul>
@@ -214,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjz45nk890005yoypqhgy6g79" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/10/hello-world/" data-id="cjz9lg2c7000ep0ypn7ef079q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -274,6 +318,10 @@
       <ul>
         
           <li>
+            <a href="/2019/08/13/Springmvc中的urlpattern静态资源无法访问/">Springmvc中的urlpattern静态资源无法访问</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/08/Maven-JVM-Bind问题/">Maven JVM_Bind问题</a>
           </li>
         
@@ -287,10 +335,6 @@
         
           <li>
             <a href="/2019/07/18/hibernate模糊查询整型字段报错问题/">hibernate模糊查询整型字段报错问题</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/14/HttpServletResponse的应用/">HttpServletResponse的应用</a>
           </li>
         
       </ul>
