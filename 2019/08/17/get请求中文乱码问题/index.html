@@ -5,19 +5,20 @@
   
 
   
-  <title>param | Hexo</title>
+  <title>get请求中文乱码问题 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="${param.name} == request.getParam(“name”)${name} == request.getAttribute(“name”). getParam是表单的值或者是url中传来的值，如/login.action?attid=${attId}getAttribute是设置在requestScope里的值">
+  <meta name="description" content="对于浏览器发出的HTTP请求： tomcat 默认是ISO-8859-1 解码  1：通过转成编码为ISO-8859-1字节数组，然后再转成UTF-8的字符串String value= new String(request.getParameter(&amp;quot;key&amp;quot;).getBytes(&amp;quot;ISO-8859-1&amp;quot;), &amp;quot;UTF-8&amp;quot;); 2：在">
+<meta name="keywords" content="bugs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="param">
-<meta property="og:url" content="http://yoursite.com/2019/06/10/param/index.html">
+<meta property="og:title" content="get请求中文乱码问题">
+<meta property="og:url" content="http://yoursite.com/2019/08/17/get请求中文乱码问题/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="${param.name} == request.getParam(“name”)${name} == request.getAttribute(“name”). getParam是表单的值或者是url中传来的值，如/login.action?attid=${attId}getAttribute是设置在requestScope里的值">
+<meta property="og:description" content="对于浏览器发出的HTTP请求： tomcat 默认是ISO-8859-1 解码  1：通过转成编码为ISO-8859-1字节数组，然后再转成UTF-8的字符串String value= new String(request.getParameter(&amp;quot;key&amp;quot;).getBytes(&amp;quot;ISO-8859-1&amp;quot;), &amp;quot;UTF-8&amp;quot;); 2：在">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-10T08:56:19.511Z">
+<meta property="og:updated_time" content="2019-08-17T08:09:29.637Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="param">
-<meta name="twitter:description" content="${param.name} == request.getParam(“name”)${name} == request.getAttribute(“name”). getParam是表单的值或者是url中传来的值，如/login.action?attid=${attId}getAttribute是设置在requestScope里的值">
+<meta name="twitter:title" content="get请求中文乱码问题">
+<meta name="twitter:description" content="对于浏览器发出的HTTP请求： tomcat 默认是ISO-8859-1 解码  1：通过转成编码为ISO-8859-1字节数组，然后再转成UTF-8的字符串String value= new String(request.getParameter(&amp;quot;key&amp;quot;).getBytes(&amp;quot;ISO-8859-1&amp;quot;), &amp;quot;UTF-8&amp;quot;); 2：在">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +65,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-param" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-get请求中文乱码问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/06/10/param/" class="article-date">
-  <time datetime="2019-06-10T08:55:50.000Z" itemprop="datePublished">2019-06-10</time>
+    <a href="/2019/08/17/get请求中文乱码问题/" class="article-date">
+  <time datetime="2019-08-17T08:06:56.000Z" itemprop="datePublished">2019-08-17</time>
 </a>
     
   </div>
@@ -78,7 +79,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      param
+      get请求中文乱码问题
     </h1>
   
 
@@ -86,34 +87,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>${param.name} == request.getParam(“name”)<br>${name} == request.getAttribute(“name”).</p>
-<p>getParam是表单的值或者是url中传来的值，如/login.action?attid=${attId}<br>getAttribute是设置在requestScope里的值</p>
-
+        <p>对于浏览器发出的HTTP请求： tomcat 默认是ISO-8859-1 解码</p>
+<p> 1：通过转成编码为ISO-8859-1字节数组，然后再转成UTF-8的字符串<br><code>String value= new String(request.getParameter(&quot;key&quot;).getBytes(&quot;ISO-8859-1&quot;), &quot;UTF-8&quot;);</code></p>
+<p>2：在 server.xml 文件里指定编码格式为UTF-8。<br>标签名：Connector 添加： URIEncoding=”UTF-8”</p>
+<pre><code>&lt;Connector connectionTimeout=&quot;20000&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; redirectPort=&quot;8443&quot; URIEncoding=&quot;UTF-8&quot;/&gt;</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/10/param/" data-id="cjzf9glop000gu4ypnw3drl1f" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/17/get请求中文乱码问题/" data-id="cjzf9gloj0009u4ypr84q444t" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2019/06/28/向上转型-java-转型问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          向上转型(java 转型问题)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/10/Hello-World-0/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/08/14/SSM文件上传错误/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">SSM文件上传错误</div>
     </a>
   
 </nav>

@@ -62,6 +62,47 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-get请求中文乱码问题" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/17/get请求中文乱码问题/" class="article-date">
+  <time datetime="2019-08-17T08:06:56.000Z" itemprop="datePublished">2019-08-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/17/get请求中文乱码问题/">get请求中文乱码问题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对于浏览器发出的HTTP请求： tomcat 默认是ISO-8859-1 解码</p>
+<p> 1：通过转成编码为ISO-8859-1字节数组，然后再转成UTF-8的字符串<br><code>String value= new String(request.getParameter(&quot;key&quot;).getBytes(&quot;ISO-8859-1&quot;), &quot;UTF-8&quot;);</code></p>
+<p>2：在 server.xml 文件里指定编码格式为UTF-8。<br>标签名：Connector 添加： URIEncoding=”UTF-8”</p>
+<pre><code>&lt;Connector connectionTimeout=&quot;20000&quot; port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot; redirectPort=&quot;8443&quot; URIEncoding=&quot;UTF-8&quot;/&gt;</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/08/17/get请求中文乱码问题/" data-id="cjzf9gloj0009u4ypr84q444t" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-SSM文件上传错误" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/08/14/SSM文件上传错误/" class="article-date">
@@ -91,7 +132,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/14/SSM文件上传错误/" data-id="cjzazkiag00035gypqwe97srv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/14/SSM文件上传错误/" data-id="cjzf9gloi0008u4ypcui4btbl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
@@ -131,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/13/Springmvc中的urlpattern静态资源无法访问/" data-id="cjzazkiai00045gyp7bptfvq6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/13/Springmvc中的urlpattern静态资源无法访问/" data-id="cjzf9gloh0007u4ypnh70mrhv" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
@@ -171,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/08/Maven-JVM-Bind问题/" data-id="cjzazkiac00015gyps7j7e5gp" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/08/Maven-JVM-Bind问题/" data-id="cjzf9gloe0003u4ypquuh8a3z" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
@@ -219,7 +260,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/08/01/footer-ejs原始文件/" data-id="cjzazkib2000c5gypf6dlf9x8" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/08/01/footer-ejs原始文件/" data-id="cjzf9glog0005u4yp7ejocm2d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -256,7 +297,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/28/mybatis-遇到的问题/" data-id="cjzazkib8000g5gyptr58icli" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/28/mybatis-遇到的问题/" data-id="cjzf9glom000cu4ypxwapndf4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
@@ -298,7 +339,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/18/hibernate模糊查询整型字段报错问题/" data-id="cjzazkib7000f5gypoxau2r03" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/18/hibernate模糊查询整型字段报错问题/" data-id="cjzf9gloo000eu4ypcyx14ip2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bugs/">bugs</a></li></ul>
@@ -428,7 +469,7 @@ private void outPutPrintWriter(HttpServletResponse resp) throws IOException{
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/14/HttpServletResponse的应用/" data-id="cjzazkibc000k5gypt3igpk51" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/14/HttpServletResponse的应用/" data-id="cjzf9glot000ku4ypdvpplpfd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -466,7 +507,7 @@ private void outPutPrintWriter(HttpServletResponse resp) throws IOException{
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/" data-id="cjzazkibf000m5gyp3ivhn5fs" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/12/struts2中实现ModelDriven接口作用/" data-id="cjzf9glox000ou4ypdlnrulxn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -513,50 +554,7 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/遇到有关-Resource注入的问题/" data-id="cjzazkibq000p5gypuj4yi0rt" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-xml配置问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/10/xml配置问题/" class="article-date">
-  <time datetime="2019-07-10T11:14:09.000Z" itemprop="datePublished">2019-07-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/10/xml配置问题/">xml配置问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在配置一个访问数据库的Url时，第一次设置的内容如下：</p>
-<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8，注意中间那个“&amp;”，在xml中这个是读不出的，正确写法将“&amp;”转义“&amp;”：</p>
-<p>jdbc:mysql://localhost:3306/photo?useUnicode=true&amp;characterEncoding=UTF-8</p>
-<p>分析：</p>
-<p>有时候在使用xml作为配置文件的时候，应该要使用xml的编码规则来进行适当的设置。</p>
-<p>下面给出xml中一些特殊符号的编码转换：</p>
-<p> ‘&lt;’     &lt;     小于号<br> ‘&gt;’         &gt;     大于号<br> ‘&amp;’     &amp;     and字符<br> ‘&apos;’     ‘     单引号<br> ‘&quot;’     “     双引号</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/07/10/xml配置问题/" data-id="cjzazkibj000n5gypcta2ajzj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/07/10/遇到有关-Resource注入的问题/" data-id="cjzf9gloy000pu4ypx3q25u5n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -616,6 +614,10 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
       <ul>
         
           <li>
+            <a href="/2019/08/17/get请求中文乱码问题/">get请求中文乱码问题</a>
+          </li>
+        
+          <li>
             <a href="/2019/08/14/SSM文件上传错误/">SSM文件上传错误</a>
           </li>
         
@@ -629,10 +631,6 @@ private AccountDao accountDao;</code></pre><p>//    public void setAccountDao(Ac
         
           <li>
             <a href="/2019/08/01/footer-ejs原始文件/">footer.ejs原始文件</a>
-          </li>
-        
-          <li>
-            <a href="/2019/07/28/mybatis-遇到的问题/">mybatis 遇到的问题</a>
           </li>
         
       </ul>
